@@ -1,6 +1,7 @@
-@MovieReviewsSocialAPI_HostAddress = http://localhost:5113
+@MovieReviewsSocialAPI_HostAddress = http://localhost:32768
+# Use HTTPS if your app is running with the https profile: https://localhost:32769
 
-GET {{MovieReviewsSocialAPI_HostAddress}}/weatherforecast/
+GET {{MovieReviewsSocialAPI_HostAddress}}/api/review/
 Accept: application/json
 
 ###
