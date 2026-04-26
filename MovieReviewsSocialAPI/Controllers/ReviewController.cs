@@ -8,14 +8,9 @@ namespace MovieReviewsSocialAPI.Controllers
     [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
-    public class ReviewController: ControllerBase
+    public class ReviewController(IReviewService reviewService) : ControllerBase
     {
-        private readonly IReviewService _reviewService;
-
-        public ReviewController(IReviewService reviewService)
-        {
-            _reviewService = reviewService;
-        }
+        private readonly IReviewService _reviewService = reviewService;
 
         [HttpGet]
         public List<ReviewResponse> Get(string? movieTitle)
